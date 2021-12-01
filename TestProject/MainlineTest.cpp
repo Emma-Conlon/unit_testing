@@ -1,6 +1,6 @@
 #include <iostream>
 #include <assert.h>
-
+#include"LottoTests.h"
 #include "../ProductionProject/Production.h"
 
 using namespace std;
@@ -8,11 +8,16 @@ using namespace std;
 int main()
 {
 	Lottery p;
+	LotteryTest l;
 
-	int a = 10;
 
-	cout << p.someMethod(a) << endl;
-	assert(p.someMethod(a) == 0);
-	assert(p.someMethod(a) == 1);
+	l.checkForInvalidInput();
+	l.checkForRepeatingNumbers();
+	l.checkForSixNumbers();
+	l.checkNumberRange();
+	l.checkForSixNumbersMixedInput();
+	
+	//assert(l.checkForInvalidInput() == 0);
+	//assert(p.someMethod(a) == 1);
 	cin.get();
 }
